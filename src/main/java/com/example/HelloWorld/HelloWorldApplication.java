@@ -1,5 +1,7 @@
 package com.example.HelloWorld;
 
+import com.example.HelloWorld.Entity.Admin;
+import com.example.HelloWorld.Repo.AdminRepo;
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import io.swagger.v3.oas.annotations.info.Contact;
 import io.swagger.v3.oas.annotations.info.Info;
@@ -31,8 +33,14 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class HelloWorldApplication {
 
 	public static void main(String[] args) {
+		AdminRepo adminRepository = null;
 		SpringApplication.run(HelloWorldApplication.class, args);
 		System.out.println("hello");
-
+		Admin admin1;
+		Admin admin2;
+		 admin1=new Admin("rh1@gmail.com","123456789");
+	    admin2=new Admin("rh2@gmail.com","123456789");
+		adminRepository.save(admin2);
+		adminRepository.save(admin2);
 	}}
 
